@@ -1,0 +1,65 @@
+{%extends "base.html"%}
+{%block title%}BMark-Login{%endblock%}
+{%block css%}<link href='static/login.css' rel='stylesheet'>{%endblock%}
+
+{%block content%}
+<div class="all" id="all">
+    <form id="login-form" onsubmit="return validateForm()" method="post">
+
+        <table class="login">
+            <tr>
+                <td>
+                    <h1 class="loginTitle">Login</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <t class="nameThing">enter your username:</t>
+                </td>
+            </tr>
+            <tr>
+                <td class="bottom-padding"> 
+                    <input type="text" id="username" name="username" placeholder="name1" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <t id="emUsername" class="em"></t> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <t class="nameThing">enter your password:</t>
+                </td>
+            </tr>
+            <tr>
+                <td> 
+                    <input type="password" name="password" id="password" placeholder="Password123!" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <t id="emPassword" class="em"></t>
+                </td>
+            </tr>
+            <tr>
+                <td class="bottom-padding"> 
+                    <input type="submit" value="submit" id="submit" class="buttonS">
+                    <input type="reset" value="reset" onclick="deleteEr()" id="reset" class="buttonS">
+                    <br>
+                    <t id="emEnd" class="em">{{emEnd}}</t>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <t>don't have an account? sign up </t>
+                    <a href="signup" class="signup-link">
+                        <t>here</t>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<script defer type="text/javascript" src="static/login.js"></script>
+{%endblock%}

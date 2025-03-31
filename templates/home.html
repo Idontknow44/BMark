@@ -1,0 +1,65 @@
+{%extends "base.html"%}
+{%block title%}BMark{%endblock%}
+{%block css%}<link href='static/home.css' rel='stylesheet'>{%endblock%}
+
+{%block content%}
+<table class="site-switch">
+  <tr>
+    <td>
+      <div colspan="3">
+        <div class="sites">
+          <a class="left-arrow" onclick="switchLeft()">
+            <img src="static/images/arrow.png">
+          </a>
+          <a class="right-arrow" onclick="switchRight()">
+            <img src="static/images/arrow.png">
+          </a>
+          <p class="noSite" id="noSite"></p>
+          <p class="siteName" id="siteName"></p>
+          <a id="siteUrl">
+            <img src="static/images/spot-saver.png" class="bg">
+            <img src="siteImage()" id="siteImage" class="siteImage">
+          </a>
+          </div>
+      </div>
+    </td>
+  </tr>
+</table>
+<table class="about">
+  <tr>
+    <td>
+      <h3 class="aboutTitle1">Welcome to BMark! What to expect:</h3>
+      <ul>
+        <li class="about1">Bmark is a website made for you to store any site you want.</li>
+        <li class="about1">This site is for whenever you have a problem with 
+          remembering a site and you don't want to scroll back in your history or when you have 
+          too many open tabs that you don't want to close and lose.</li>
+          <br>
+        <li class="about1">Here are some explanations on our features:</li>
+      </ul>
+      <br>
+      <div class="aboutContainer">
+        <h4 class="aboutTitle2">Home:</h4>
+          <ul>
+            <li class="about2"> Here you can find your favorite websites and the explanation you're reading now,
+              to enter home you can just click on the logo.</li>
+            </ul>
+          <br>
+          <h4 class="aboutTitle2">All sites:</h4>
+          <ul>
+            <li class="about2"> Here you store your sites in folders or ways you want, reccomend them to others, you can set your favorite sites in home and     
+            choose any image for every site!</li>
+            </ul>
+          <br>
+          <h4 class="aboutTitle2">Site board:</h4>
+            <ul>
+              <li class="about2">Here you can see a leader board of sortes where you can see other people reviews and times the amount of user that logged in.</li>
+            </ul>
+      </div>
+      <br>
+    </td>
+  </tr>
+</table>
+<script defer type="text/javascript" src="static/home.js"></script>
+<script defer> addDropdown(); </script>
+{%endblock%}

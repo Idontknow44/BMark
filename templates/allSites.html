@@ -1,0 +1,53 @@
+{%extends "base.html"%}
+{%block title%}BMark{%endblock%}
+{%block css%}<link href='static/allSites.css' rel='stylesheet'>{%endblock%}
+
+{%block content%}
+<div class="all">
+    <div class="sites">
+        {% for site in sites %}
+            {% if name == site[0] %}
+                <div class="site">
+                    <a href="{{ site[2] }}" class="siteLink">
+                        <div>
+                            <br>
+                            <t class="siteTitle">{{ site[1] }}</t>
+                            <br>
+
+                            
+                            <img src="{{ site[3] }}" height="100px" width="100px">
+                            <br>
+
+                            <t>add to site board?</t>
+                            <div class="toggle-container">
+                                <label class="checkbox">
+                                    <input type="checkbox" data-site-name="{{ site[1] }}" onclick="AddToBoard(this)"
+                                        {% if site[4] == 1 %} checked {% endif %}>
+                                    <span></span>
+                                </label>
+                            </div>
+                            <br>
+                            <br>
+
+                            <form action="/delete_site" method="POST">
+                                <input type="hidden" name="siteName" value="{{ site[1] }}">
+                                <button class="buttonS" name="delete" type="submit">delete</button>
+                            </form>
+                            <br>
+                        </div>
+                    </a>
+                </div>
+            {% endif %}
+        {% endfor %}
+        <div class="addSite">
+            <a href="/add_site" class="plus-con">
+                <div class="plus">
+                    <img src="static/images/plus.png" height="150px" width="150px">
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="static/allSites.js"></script>
+{%endblock%}

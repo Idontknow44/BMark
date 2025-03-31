@@ -1,0 +1,34 @@
+{%extends "base.html"%}
+{%block title%}BMark-Site Board{%endblock%}
+{%block css%}<link href='static/siteBoard.css' rel='stylesheet'>{%endblock%}
+
+{%block content%}
+<div class="container">
+    <div class="namee-box">
+        <t class="namee">Site Leaderboard</t>
+    </div>
+    {% if not board %}
+    <p>The leaderboard is currently empty.</p>
+    {% else %}
+    <table class="leaderboard-table">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Url</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for site in board %}        
+            <tr class='board_site_link' data-href="{{ site[0] }}">
+                <td>{{ loop.index }}</td>
+                <td>{{ site[0] }}</td>
+                <td>{{ site[1] }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+</div>
+<script defer type="text/javascript" src="static/siteBoard.js"></script>
+{%endblock%}

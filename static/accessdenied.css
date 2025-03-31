@@ -1,0 +1,25 @@
+.all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.box {
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    transform: translateY(70px);
+    justify-content: center;
+    border: 3.5px solid white;
+    border-radius: 20px;
+    padding-bottom: 60px;
+    flex-direction: column;
+    padding-top: 60px;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    box-shadow: 0px 0px 40px 5px black;
+    user-select: none;
+    color: white;
+}

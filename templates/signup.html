@@ -1,0 +1,125 @@
+{%extends "base.html"%}
+{%block title%}BMark-Register{%endblock%}
+{%block css%}<link href='static/signup.css' rel='stylesheet'>{%endblock%}
+
+{%block content%}
+<div class="all" id="all">
+    <form id="signup-form" onsubmit="return validateForm()" method="post">
+        <!--em = Error Message-->
+        <table class="signup">
+            <tr>
+                <td>
+                    <h1 class="signupTitle">Sign Up</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <t class="nameThing">enter your username:</t>
+                </td>
+            </tr>
+            <tr>
+                <td class="bottom-padding"> 
+                    <input type="text" id="username" name="username" placeholder="name1" required> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <t id="emUsername" class="em"></t>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <t class="nameThing">enter your password:</t>
+                </td>
+            </tr>
+            <tr>
+                <td class="bottom-padding"> 
+                    <input type="password" id="password" name="password" placeholder="Password123!" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <t id="emPassword" class="em"></t>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <t class="nameThing">validate your password:</t>
+                </td>
+            </tr>
+            <tr>
+                <td class="bottom-padding"> 
+                    <input type="password" id="passwordCheck" placeholder="Password123!" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <t id="emPasswordCheck" class="em"></t>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <t class="nameThing">enter your name:</t>
+                </td>
+            </tr>
+            <tr>
+                <td class="bottom-padding"> 
+                    <input type="text" id="name" name="name" placeholder="Ben" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <t id="emName" class="em"></t>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <t class="nameThing">enter your last name:</t>
+                </td>
+            </tr>
+            <tr>
+                <td class="bottom-padding"> 
+                    <input type="text" id="familyName" name="familyName"  placeholder="Benny" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <t id="emFamilyName" class="em"></t>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <t class="nameThing">enter your email:</t>
+                </td>
+            </tr>
+            <tr>
+                <td> 
+                    <input type="text" id="email" name="email" placeholder="name@example.com" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <t id="emEmail" class="em"></t>
+                </td>
+            </tr>
+            <tr>
+                <td class="bottom-padding"> 
+                    <input type="submit" value="submit" id="submit" class="buttonS">
+                    <input type="reset" value="reset" onclick="deleteEr()" id="reset" class="buttonS">
+                    <br>
+                    <t id="emEnd" class="em">{{emEnd}}</t>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <t>already have an account? log in </t>
+                    <a href="login" class="login-link">
+                        <t>here</t>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<script defer type="text/javascript" src="static/signup.js"></script>
+{%endblock%}

@@ -1,0 +1,206 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  z-index: -1;
+}
+.sites {
+  display: flex;
+  width: 100vw;
+  height: 600px;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: none;
+  flex-wrap: nowrap;
+  z-index: 50;
+  margin-top: 86px;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.sites > a {
+  flex-shrink: 0;
+  width: 100vw;
+  height: 700px;
+  box-sizing: border-box;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.bg {
+  width: 100vw;
+  height: 700px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  box-sizing: border-box;
+  z-index: 80;
+  position:absolute; 
+}
+.siteImage { 
+  width: auto;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  box-sizing: border-box;
+  z-index: 85;
+  display: block;
+  position:relative;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.site-switch {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 800px;
+  user-select: none;
+  width: 100vw;
+  overflow: hidden;
+  border: none;
+}
+.noSite {
+  position: absolute;
+  top: 50; 
+  left: 50;
+  z-index: 90;
+  display: block;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 70px;
+  user-select: none;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.siteName {
+  position: absolute;
+  bottom: -11%; 
+  z-index: 90;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 50px;
+  user-select: none;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  transition: bottom 0.3s ease;
+}
+.sites:hover .siteName {
+  bottom: 5%;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.right-arrow img{
+  transform: scaleX(-1);
+}
+.left-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.right-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.left-arrow{
+  border: transparent;
+  border-radius: 5px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  left: 10px;
+  position: absolute;
+  transform: translateY(50);
+  max-width: 80px;
+  z-index: 89;
+  max-height: 250px;
+  transition: background-color 0.2s ease;
+}
+.right-arrow {
+  border: transparent;
+  border-radius: 5px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  right: 25px;
+  position: absolute;
+  transform: translateY(50);
+   max-width: 80px;
+  z-index: 89;
+  max-height: 250px;
+  transition: background-color 0.2s ease;
+}
+.sites .left-arrow.active {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.sites .right-arrow.active {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.left-arrow img, .right-arrow img {
+  width: 100%;
+  height: auto;
+  max-width: 50px;
+  max-height: 250px;
+}
+.left-arrow, .right-arrow {
+  top: 50%;
+  transform: translateY(-50%);
+  user-select: none;
+}
+.arrow img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.left-arrow {
+  left: 10px;
+  position: absolute;
+}
+.about {
+  margin-top: -45px;
+  margin-bottom: 100px;
+  color: white;
+  margin-left: 40px;
+  margin-right: 40px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.aboutContainer {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.aboutTitle1 {
+  margin-left: -20px;
+}
+.aboutTitle2 {
+  margin-left: -20px;
+}
+.site-card {
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+}
+.site-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.siteImage {
+  display: none;
+}
+
+.siteImage.show {
+  display: block;
+}

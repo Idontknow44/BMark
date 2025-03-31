@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="static/addSite.css" rel="stylesheet">
+</head>
+<body>
+    <div class="all">
+        <form id="addSite-form" onsubmit="return validateForm()" method="post">
+            <div class="addSite">
+                <div>
+                    <span class="nameThing">Site Name:</span>
+                </div>
+                <div class="bottom-padding"> 
+                    <input type="text" id="siteName" name="siteName" placeholder="BMark" required>
+                </div>
+                <div>
+                    <span id="emSiteName" class="em"></span> 
+                </div>
+                <div>
+                    <span class="nameThing">Site Url:</span>
+                </div>
+                <div>
+                    <input type="text" name="siteUrl" id="siteUrl" placeholder="https://www.BMarkSite.com" required>
+                </div>
+                <div>
+                    <span id="emSiteUrl" class="em"></span>
+                </div>
+                <div>
+                    <span class="nameThing">Site's Image Url:</span>
+                </div>
+                <div>
+                    <input type="text" name="imageUrl" id="imageUrl" placeholder="https://example.com/image.png" required>
+                </div>
+                <div>
+                    <span id="emImageUrl" class="em"></span>
+                </div>
+                <div>
+                    <div class="bottom-padding"> 
+                        <input type="submit" value="submit" id="submit" class="buttonS">
+                        <input type="reset" value="reset" onclick="deleteEr()" id="reset" class="buttonS">
+                        <br>
+                        <span id="emEnd" class="em">{{emEnd}}</span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script defer type="text/javascript" src="static/addSite.js"></script>
+</body>
+</html>

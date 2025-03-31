@@ -1,0 +1,47 @@
+{%extends "base.html"%}
+{%block title%}Admin Page{%endblock%}
+{%block css%}<link href='static/adminpage.css' rel='stylesheet'>{%endblock%}
+
+{%block content%}
+<div class="all">
+    <table class="userList">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Admin</th>
+                <th>Set</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                {% for data in user %}
+                    <td>{{ data }}</td>
+                {% endfor %}
+                <td>   
+                    <form action="/delete_user" method="POST">
+                        <input type="hidden" name="username" value="{{ user[0] }}">
+                        <button class="buttonS" name="delete" type="submit">delete</button>
+                    </form>
+                </td>
+                <td>
+                    <form action="/make_admin_user" method="POST">
+                        <input type="hidden" name="username" value="{{ user[0] }}">
+                        {% if user[5] == 1 %}
+                            <button class="buttonS" name="adminmake" type="submit">remove admin</button>
+                        {% elif user[5] == 0 %}
+                            <button class="buttonS" name="adminmake" type="submit">assign admin</button>
+                        {% endif %}
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<script defer type="text/javascript" src="static/adminpage.js"></script>
+{%endblock%}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="static/images/BMark_logo.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%}{%endblock%}</title>
+    <link href='static/base.css' rel='stylesheet'>
+    {%block css%}{%endblock%}
+</head>
+<body>
+    <!--top logos-->
+    <div class="topButton">
+        <a href="settings">
+            <img src="static/images/settings.png" width="55" height="55" alt="Settings" class="button">
+        </a>
+    </div>
+    <table class="top-hud">
+        <div class="title-hud">
+            <tr>
+                <td class="logo-cell">
+                    <a href="/" class="logo-cont">
+                        <img id="logo" src="static/images/BMark_logo.ico" width="100" height="100" alt="BMark Logo">
+                    </a>
+                </td>
+                <td class="title">
+                    <h1 class="title1">B</h1> <h1 class="title2">Mark</h1>
+                </td>
+            </tr>
+        </div>
+        <tr>
+            <td colspan="2">
+            <table class="buttons">
+                <tr class="annoyingBorders">
+                    <td class="border-cell">
+                        <t class="name">{{name}} |</t>
+                    </td>
+                    {% if name == "guest" %}
+                        <td class="border-cell">
+                            <a href="login">
+                                <button class="button">Login</button>
+                            </a>
+                        </td>
+                        <td class="border-cell">
+                            <a href="signup">
+                                <button class="button">Sign Up</button>
+                            </a>
+                        </td>
+                    {% else %}
+                        <td class="border-cell">
+                            <a href="/logout">
+                                <button class="button">Log Out</button>
+                            </a>
+                        </td>
+                    {% endif %}
+                    {% if admin == True %}
+                        <div class="buttons-content">
+                            <td class="border-cell">
+                                <a href="adminpage">
+                                    <button class="button">Admin Page</button>
+                                </a>
+                            </td>
+                    {% endif %}
+                    {% if name != "guest" %}
+                        <td class="border-cell">
+                            <a href="all_sites">
+                                <button class="button">All Sites</button>
+                            </a>
+                    </td>
+                        <td class="border-cell">
+                            <a href="/site_board">
+                                <button class="button">Site Board</button>
+                            </a>
+                        </td>
+                    {% endif %}
+                    </div>
+                </tr>
+            </table>
+            </td>
+        </tr>
+    </table>
+    {%block content%}
+    {%endblock%}
+</body>
+</html>

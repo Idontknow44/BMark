@@ -1,0 +1,41 @@
+.all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+    
+}
+.userList {
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: white;
+    padding: 20px;
+    border-radius: 7px;
+    border: 1px transparent;
+    box-shadow: 0px 0px 40px 5px black;
+}
+.userList td, .userList th {
+    border: 1px solid transparent;
+    padding: 10px;
+}
+.buttonS {
+    font-weight: bold;
+    border-radius: 4px;
+    background-color: white;
+    border: 1px solid black;
+    user-select: none;
+    color: black;
+    cursor: pointer;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    align-items: center;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.all .buttonS:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}

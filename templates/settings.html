@@ -1,0 +1,81 @@
+{%extends "base.html"%}
+{%block title%}BMark{%endblock%}
+{%block css%}<link href='static/base.css' rel='stylesheet'>{%endblock%}
+
+{%block content%}
+<div class="all" id="all">
+    <div class="all-sett">
+        <div class="page">
+            <t class="titleS">Settings</t>
+            <!-- <div class="toggle-container">
+                <span class="toggle-label">Dark Mode</span>
+                <label class="toggles">
+                    <input type="checkbox" id="darkMode">
+                    <span class="slider"></span>
+                </label>
+            </div> -->
+            <br>
+            {% if name != "guest" %}
+                <form class="favSites" onsubmit="return validateForm()" method="post">
+                    <t>site 1: </t>
+                    <select id="dropdown1" name="site1" class="site-dropdown" onchange="removeSitesOption()">
+                        <option value="" id="defaultOption1">sites</option>
+                        {% for site in sites %}
+                            {% if name == site[0] and site[1] %}
+                                <option value="{{ site[1] }}">{{ site[1] }}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+                    <br>
+                    <t>site 2: </t>
+                    <select id="dropdown2" name="site2" class="site-dropdown" onchange="removeSitesOption()">
+                        <option value="" id="defaultOption2">sites</option>
+                        {% for site in sites %}
+                            {% if name == site[0] and site[1] %}
+                                <option value="{{ site[1] }}">{{ site[1] }}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+                    <br>
+                    <t>site 3: </t>
+                    <select id="dropdown3" name="site3" class="site-dropdown" onchange="removeSitesOption()">
+                        <option value="" id="defaultOption3">sites</option>
+                        {% for site in sites %}
+                            {% if name == site[0] and site[1] %}
+                                <option value="{{ site[1] }}">{{ site[1] }}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+                    <br>
+                    <t>site 4: </t>
+                    <select id="dropdown4" name="site4" class="site-dropdown" onchange="removeSitesOption()">
+                        <option value="" id="defaultOption4">sites</option>
+                        {% for site in sites %}
+                            {% if name == site[0] and site[1] %}
+                                <option value="{{ site[1] }}">{{ site[1] }}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+                    <br>
+                    <t>site 5: </t>
+                    <select id="dropdown5" name="site5" class="site-dropdown" onchange="removeSitesOption()">
+                        <option value="" id="defaultOption5">sites</option>
+                        {% for site in sites %}
+                            {% if name == site[0] and site[1] %}
+                                <option value="{{ site[1] }}">{{ site[1] }}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+                    <br>
+                    <br>
+                    <div>
+                        <input type="submit" value="submit" id="submit" class="buttonS">
+                        <input type="reset" value="reset" id="reset" class="buttonS">
+                    </div>
+                </form>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<script defer type="text/javascript" src="static/base.js"></script>
+{%endblock%}

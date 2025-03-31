@@ -1,0 +1,111 @@
+.all {
+    display: flex;
+    margin-top: 170px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.sites {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+}
+.site {
+    gap: 20px;
+    align-items: center;
+    white-space: nowrap;
+    border-radius: 7px;
+    height: 270px;
+    width: 175px;
+    background-color: white;
+    padding: 10px;
+    margin-left: 10px;
+    text-align: center;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 0px 10px black;
+    border-collapse: collapse; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: background-color 0.15s ease, transform 0.15s ease;
+}
+.site:hover {
+    transform: scale(0.99) translateY(3.8px) scaleY(0.98) scaleX(0.99);
+    background-color: rgb(247, 247, 247);
+}
+.addSite {
+    align-items: center;
+    gap: 20px;
+    white-space: nowrap;
+    border-radius: 7px;
+    background-color: none;
+    padding: 10px;
+    margin-left: 10px;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    border-collapse: collapse;
+    border: 3.5px dashed white;
+    cursor: pointer;
+    height: 270px;
+    width: 175px;
+    transition: background-color 0.15s ease, transform 0.15s ease;
+}
+.addSite:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    transform: scale(0.99) translateY(3.8px) scaleY(0.98) scaleX(0.99);
+}
+.checkbox {
+    height: 20px;
+    width: 20px;
+}
+/* .checkbox:hover {
+    cursor: pointer;
+} */
+.toggle-container {
+    display: inline-block;
+    margin-left: 5px;
+    margin-top: 2px;
+}
+/* .toggle-container:hover {
+    cursor: pointer;
+} */
+.siteTitle {
+    font-weight: bold;
+    justify-content: space-around;
+    font-size: 30px;
+}
+.buttonS {
+    border-radius: 4px;
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    user-select: none;
+    cursor: pointer;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+.buttonS:hover {
+    background-color: rgb(233, 233, 233);
+}
+.plus-con {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.plus-con img {
+  width: auto;
+}
+.siteLink {
+    color: black;
+    text-decoration: none;
+}
